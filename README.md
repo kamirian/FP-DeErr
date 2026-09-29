@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/readme-banner.png" alt="FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials" width="720">
+</p>
+
 # FP-DeErr
 
 **Application-Oriented Error Decomposition for Foundation Potentials**
