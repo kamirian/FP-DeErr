@@ -2,7 +2,7 @@
   <img src="docs/readme-banner.png" alt="FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials" width="820">
 </p>
 
-# FP-DeErr
+# Overview
 
 FP-DeErr applies application-oriented error decomposition to foundation potentials (FPs),
 also known as universal machine-learning interatomic potentials (MLIPs), resolving where
