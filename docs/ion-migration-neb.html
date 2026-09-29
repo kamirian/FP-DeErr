@@ -283,16 +283,16 @@
     }
   
     .logo { display: inline-flex; align-items: center; gap: .55rem; }
-    .logo-mark { width: 32px; height: 32px; border-radius: 9px; display: block; }
-    .hero-mark { width: 172px; height: 172px; border-radius: 44px; display: block;
-                 margin: 0 auto 1.4rem; box-shadow: 0 6px 22px rgba(0,0,0,.45); }
+    .logo-mark { width: 32px; height: auto; display: block; }
+    .hero-mark { width: 172px; height: auto; display: block;
+                 margin: 0 auto 1.4rem; }
   
     .page-head { display: flex; align-items: center; justify-content: center;
                  gap: 1rem; flex-wrap: wrap; margin-bottom: .35rem; }
-    .page-mark { width: 96px; height: 96px; border-radius: 26px; flex: 0 0 auto; display: block; }
+    .page-mark { width: 96px; height: auto; flex: 0 0 auto; display: block; }
     .page-head h1 { margin: 0; }
     @media (max-width: 600px) {
-      .page-mark { width: 64px; height: 64px; border-radius: 18px; }
+      .page-mark { width: 64px; height: auto; }
     }
   </style>
 <script type="application/ld+json">
@@ -329,7 +329,7 @@
 <body>
 
 <nav>
-  <a class="logo" href="index.html"><img class="logo-mark" src="mark-face.png" alt="" />FP-DeErr</a>
+  <a class="logo" href="index.html"><img class="logo-mark" src="mark-face-transparent.png" alt="" />FP-DeErr</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="force-error.html">Force Prediction</a>
@@ -343,7 +343,7 @@
 <div class="hero">
   <div class="tag-line">FP-DeErr &middot; Ion Migration by NEB</div>
   <div class="page-head">
-    <img class="page-mark" src="mark.png" alt="" />
+    <img class="page-mark" src="mark-transparent.png" alt="" />
     <h1>Ion Migration by NEB</h1>
   </div>
   <p>
