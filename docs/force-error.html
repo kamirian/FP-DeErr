@@ -356,8 +356,11 @@
   
     .page-head { display: flex; align-items: center; justify-content: center;
                  gap: 1rem; flex-wrap: wrap; margin-bottom: .35rem; }
-    .page-mark { width: 56px; height: 56px; border-radius: 15px; flex: 0 0 auto; display: block; }
+    .page-mark { width: 96px; height: 96px; border-radius: 26px; flex: 0 0 auto; display: block; }
     .page-head h1 { margin: 0; }
+    @media (max-width: 600px) {
+      .page-mark { width: 64px; height: 64px; border-radius: 18px; }
+    }
   </style>
 <script type="application/ld+json">
 {
