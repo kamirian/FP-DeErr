@@ -2,7 +2,7 @@
 
 The Phase Stability and Elemental Ordering component of [FP-DeErr](../README.md): convex-hull/
 relative-phase-stability, elemental-ordering energy ranking, and structural-relaxation (RMSD)
-metrics for foundation potentials (FPs).
+error-decomposition metrics for foundation potentials (FPs).
 
 Leaderboard: **https://mogroupumd.github.io/FP-DeErr/phase-stability-ordering.html**
 
@@ -236,7 +236,7 @@ compare).
 | RMSD thresholds | Increasingly strict measures of fidelity. |
 
 No overall ranking is published across these three metric groups, or within a group across
-unrelated columns; they are complementary, independent measurements. See the paper and Methods
+unrelated columns; they are complementary diagnostic measurements. See the paper and Methods
 Sections 4.6.1-4.6.3 for complete methodological details.
 
 ---
@@ -268,7 +268,7 @@ See [Adding a potential](../ADDING_A_POTENTIAL.md) for the full workflow.
 The two standardized files under `data/` and `analysis/convexhull_ordering_analysis_all_models.ipynb`
 together reproduce every result reported in the paper -- running the notebook top to bottom
 requires only those files plus `scripts/convexhull_analysis_utils.py`, no cluster or FP packages.
-Model versions and official sources for the seven evaluated FPs are documented once on the
+Model versions and official sources for the evaluated FPs are documented once on the
 [FP-DeErr home page](../README.md#foundation-potentials-evaluated) rather than duplicated here.
 
 ---

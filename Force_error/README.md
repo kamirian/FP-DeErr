@@ -1,7 +1,7 @@
 # Force Prediction
 
-The Force Prediction component of [FP-DeErr](../README.md): force-magnitude and force-angle error
-metrics for foundation potentials (FPs) against DFT reference forces.
+The Force Prediction component of [FP-DeErr](../README.md): force-magnitude and force-angle
+error-decomposition metrics for foundation potentials (FPs) against DFT reference forces.
 
 Leaderboard: **https://mogroupumd.github.io/FP-DeErr/force-error.html**
 
@@ -206,9 +206,9 @@ The standardized results files under `data/` and the three analysis notebooks to
 every result reported in the paper. See [`data/README.md`](data/README.md) for how to obtain or
 regenerate them, and the `generation/` notebooks to evaluate a new FP -- each is a template that
 writes SLURM job/submission scripts for your own cluster; running its cells never submits a job.
-Once you have results for MatPES-PBE, MatPES-r2SCAN, or OMat24 rattled-1000, open a
-[GitHub issue](https://github.com/mogroupumd/FP-DeErr/issues) with the FP's name, architecture,
-training data, checkpoint/version, and computed metrics.
+Once you have results for MatPES-PBE, MatPES-r2SCAN, or OMat24 rattled-1000, see
+[`ADDING_A_POTENTIAL.md`](../ADDING_A_POTENTIAL.md) for how to submit them. Submissions are
+handled by email; the repository does not take outside commits.
 
 Model versions and official sources for the evaluated FPs are documented once on the
 [FP-DeErr home page](../README.md#foundation-potentials-evaluated) rather than duplicated here.

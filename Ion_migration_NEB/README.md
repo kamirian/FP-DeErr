@@ -1,8 +1,8 @@
 # Ion Migration by NEB
 
 The Ion Migration by NEB component of [FP-DeErr](../README.md): migration-barrier and
-migration-pathway metrics for foundation potentials (FPs), using the nudged elastic band
-(NEB) method.
+migration-pathway error-decomposition metrics for foundation potentials (FPs), using the
+nudged elastic band (NEB) method.
 
 Leaderboard: **https://mogroupumd.github.io/FP-DeErr/ion-migration-neb.html**
 
@@ -261,7 +261,7 @@ Table 8 in the manuscript; implementation details in the Methods.
 The exact denominators (`n_total`/`n_nonconverged`, and which population feeds each MAE/RMSE
 pair) are those implemented in `scripts/neb_analysis.py`'s `compute_barrier_error_summaries`
 and `compute_profile_summaries` -- not redefined here. No overall ranking is published across
-these metrics; they are complementary, independent measurements. See the paper and Methods
+these metrics; they are complementary diagnostic measurements. See the paper and Methods
 Section 4.7 for complete methodological details.
 
 ---
@@ -315,7 +315,7 @@ See [Adding a potential](../ADDING_A_POTENTIAL.md) for the full workflow.
 `data/ion_migration_neb_results_standardized.json` (see
 [`data/README.md`](data/README.md) for how to obtain it) and
 `analysis/neb_analysis.ipynb` together reproduce every NEB result reported in the paper.
-Model versions and official sources for the seven evaluated FPs are documented once on
+Model versions and official sources for the evaluated FPs are documented once on
 the [FP-DeErr home page](../README.md#foundation-potentials-evaluated) rather than
 duplicated here.
 

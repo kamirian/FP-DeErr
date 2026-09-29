@@ -14,7 +14,7 @@ FP-DeErr introduces application-oriented error decomposition through metrics tha
 performance according to the physically consequential quantities and configurations governing
 computational tasks, including the fractions of highly accurate and large-force-error atoms,
 far-from-equilibrium atoms, relative phase-stability and convex-hull agreement, and along-path
-errors in ion migration. These metrics from error decompositions identify where FP errors arise
+errors in ion migration. These error-decomposition metrics identify where FP errors arise
 within specific computational tasks, providing targeted guidance for model development.
 
 FP-DeErr provides the reference datasets, the evaluation code, and a public leaderboard for three
@@ -221,7 +221,7 @@ reference; the cutoff and pseudopotential version do not necessarily, so small s
 offsets relative to MatPES-PBE are expected independently of model quality.
 
 &para; ALIGNN is trained on JARVIS-DFT at the **OptB88vdW** level, not PBE. Its training set is 307,113 points, split 90:5:5. It is the only FP here
-whose training reference functional differs from the evaluation reference, so its scores measure
+trained entirely at a single functional other than the evaluation reference, so its scores measure
 agreement with the FP-DeErr MatPES-PBE reference rather than a functional-matched fitting error.
 
 &dagger;&dagger; NEP89 is trained on eleven datasets computed at different quantum-mechanical levels

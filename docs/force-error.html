@@ -406,8 +406,8 @@
     <h1>Force Prediction</h1>
   </div>
   <p>
-    Application-oriented force-error metrics for foundation potentials (FPs), evaluated on
-    MatPES-PBE, MatPES-r2SCAN, and OMat24 rattled-1000.
+    Application-oriented error-decomposition metrics for force prediction by foundation
+    potentials (FPs), evaluated on MatPES-PBE, MatPES-r2SCAN, and OMat24 rattled-1000.
   </p>
   <div class="cta">
     <a class="btn btn-primary" href="#results">View Leaderboard</a>
@@ -514,7 +514,7 @@
       <p class="lb-note" id="note-mattersim" style="font-size:0.8rem;color:var(--muted);margin-top:0.6rem;"><sup>*</sup> MatterSim&rsquo;s training dataset is not publicly documented in detail. The model card states only that the released <code>MatterSim-v1.0.0-5M</code> checkpoint was trained on a PBE-based dataset of approximately 6M structures; the dataset is neither named nor released. Its <span class="tag-ood">OOD</span> label therefore reflects the absence of any documented MatPES or OMat24 training exposure, not a verified dataset composition.</p>
     <p class="lb-note" id="note-nequix" style="font-size:0.8rem;color:var(--muted);margin-top:0.6rem;"><sup>&dagger;</sup> The FP-DeErr checkpoint is <code>nequix-oam-1</code>. The official <a href="https://github.com/atomicarchitects/nequix">nequix repository</a> documents this checkpoint as trained on OMat24, sAlex and MPTrj at the DFT (PBE+U) level. The Nequix paper (Koker, Kotak &amp; Smidt, <a href="https://arxiv.org/abs/2508.16067">arXiv:2508.16067</a>) describes a model trained on MPTrj and does not report a training-set size or parameter count for this released OAM checkpoint; the 707,569-parameter model size shown here was measured from the loaded checkpoint by FP-DeErr.</p>
     <p class="lb-note" id="note-nep89" style="font-size:0.8rem;color:var(--muted);margin-top:0.6rem;"><sup>&sect;</sup> NEP89 (<code>nep89_20250409</code>) is trained on eleven datasets computed at different quantum-mechanical levels rather than a single reference functional. Its scores on this board therefore measure practical agreement with the MatPES-PBE reference rather than agreement with a single matched reference functional. The eleven datasets and the 537,641-configuration training total are reported in the <a href="https://arxiv.org/abs/2504.21286">NEP89 paper</a>.</p>
-    <p class="lb-note" id="note-alignn" style="font-size:0.8rem;color:var(--muted);margin-top:0.6rem;"><sup>&Dagger;</sup> ALIGNN (<code>alignnff_wt10</code>) is trained on JARVIS-DFT at the <strong>OptB88vdW</strong> level, not PBE. It is the only potential on this board whose training reference functional differs from the evaluation reference, so its scores measure agreement with the FP-DeErr MatPES-PBE reference rather than a functional-matched fitting error.</p>
+    <p class="lb-note" id="note-alignn" style="font-size:0.8rem;color:var(--muted);margin-top:0.6rem;"><sup>&Dagger;</sup> ALIGNN (<code>alignnff_wt10</code>) is trained on JARVIS-DFT at the <strong>OptB88vdW</strong> level, not PBE. It is the only potential on this board trained entirely at a single functional other than the evaluation reference, so its scores measure agreement with the FP-DeErr MatPES-PBE reference rather than a functional-matched fitting error.</p>
     </div>
   </div>
 
