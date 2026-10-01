@@ -167,59 +167,42 @@
                  margin: 0 auto 1.4rem; }
 
     /* --- banner hero --------------------------------------------------- */
-    :root { --c-force: #6fa3e0; --c-phase: #e0b350; --c-ion: #5cc19d;
-            --banner-bg: #1d2733; --banner-text: #f4f6f8; --banner-sub: #c9d1da; }
-    .banner-wrap { max-width: 1080px; margin: 2.2rem auto 0; padding: 0 2rem; }
-    #components { padding-top: 2.6rem; }
-    .banner { position: relative; background: var(--banner-bg);
-              border: 1px solid var(--border); border-radius: 14px;
-              overflow: hidden; padding: 1.7rem 1.6rem 2rem; text-align: left; }
+    :root { --c-force: #6fa3e0; --c-phase: #e0b350; --c-ion: #5cc19d; }
+    .banner-wrap { max-width: 1080px; margin: 2.6rem auto 0; padding: 0 2rem; }
     .banner-id { display: flex; align-items: center; justify-content: center; gap: 1.2rem; }
     .banner-mark { width: 104px; height: auto; display: block; flex: 0 0 auto; }
+    .banner-words { text-align: left; }
     .banner-words h1 { font-size: clamp(2rem, 5.2vw, 3.1rem); font-weight: 800;
-                       color: var(--banner-text); letter-spacing: -0.5px; line-height: 1.1; margin: 0; }
+                       color: var(--heading); letter-spacing: -0.5px; line-height: 1.1; margin: 0; }
     .banner-tag { margin: 0.4rem 0 0; font-size: clamp(0.95rem, 2.2vw, 1.18rem);
-                  color: var(--banner-sub); max-width: none; }
-    .banner-key { position: absolute; top: 1.3rem; right: 1.5rem; display: flex;
-                  gap: 1.2rem; color: var(--banner-sub); font-size: 0.9rem; }
+                  color: var(--text); max-width: none; }
+    .banner-key { display: flex; justify-content: center; gap: 1.4rem; margin-top: 1.2rem;
+                  color: var(--muted); font-size: 0.9rem; }
     .banner-key span { display: inline-flex; align-items: center; gap: 0.45rem; }
     .key-line { width: 34px; height: 6px; display: block; flex: 0 0 auto; overflow: visible; }
-    .banner-panels { display: grid; grid-template-columns: repeat(3, 1fr);
-                     gap: 1rem; margin-top: 1.7rem; }
-    .banner-panel { display: block; text-decoration: none; border: 1px solid transparent;
-                    border-radius: 10px; padding: 0.7rem 0.7rem 0.6rem;
-                    transition: background 0.15s, border-color 0.15s, transform 0.15s; }
-    .banner-panel:hover, .banner-panel:focus-visible {
-      background: rgba(255,255,255,0.055); border-color: var(--c); transform: translateY(-2px); }
-    .banner-panel:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
-    .panel-art { display: block; width: 100%; height: auto; }
-    .panel-label { display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-                   margin-top: 0.55rem; font-size: clamp(0.88rem, 1.7vw, 1rem);
-                   font-weight: 600; color: var(--banner-text); text-align: center; }
-    .panel-dot { width: 14px; height: 14px; border-radius: 4px; background: var(--c); flex: 0 0 auto; }
-    .banner-strip { position: absolute; left: 0; right: 0; bottom: 0; display: flex; height: 7px; }
+    .banner-strip { display: flex; height: 5px; border-radius: 3px; overflow: hidden; margin-top: 1.4rem; }
     .banner-strip i { flex: 1 1 0; }
     .banner-strip i:nth-child(1) { background: var(--c-force); }
     .banner-strip i:nth-child(2) { background: var(--c-phase); }
     .banner-strip i:nth-child(3) { background: var(--c-ion); }
+    #components { padding-top: 2.4rem; }
     .hero { padding-top: 0.8rem; }
+
+    .card-art { display: block; border-radius: 10px; padding: 0.3rem 0.2rem;
+                margin: -0.3rem 0 1.1rem; transition: background 0.15s, transform 0.15s; }
+    .card-art:hover, .card-art:focus-visible { background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+    .card-art:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+    .panel-art { display: block; width: 100%; height: auto; }
+    .panel-art .fp-hollow { fill: var(--surface); }
 
     @media (max-width: 860px) {
       .banner-wrap { padding: 0 1.1rem; }
-      .banner { padding: 1.4rem 1rem 1.7rem; }
-      .banner-id { flex-direction: column; text-align: center; gap: 0.8rem; }
+      .banner-id { flex-direction: column; gap: 0.8rem; }
+      .banner-words { text-align: center; }
       .banner-mark { width: 92px; }
-      .banner-key { position: static; justify-content: center; margin: 1rem 0 0; }
-      .banner-panels { gap: 0.5rem; margin-top: 1.2rem; }
-      .panel-label { font-size: 0.88rem; gap: 0.35rem; }
-      .panel-dot { width: 12px; height: 12px; }
     }
     @media (max-width: 560px) {
-      .banner-panels { grid-template-columns: 1fr; gap: 0.3rem; }
-      .banner-panel { display: flex; align-items: center; gap: 0.85rem; padding: 0.5rem 0.6rem; }
-      .panel-art { width: 118px; flex: 0 0 118px; }
-      .panel-label { margin-top: 0; justify-content: flex-start; text-align: left;
-                     font-size: 0.98rem; }
+      .card-art .panel-art { max-width: 265px; margin: 0 auto; }
     }
   </style>
 
@@ -265,89 +248,79 @@
 </nav>
 
 <div class="banner-wrap">
-  <div class="banner">
-    <div class="banner-id">
-      <img class="banner-mark" src="mark-emblem-named.png" alt="" />
-      <div class="banner-words">
-        <h1>FP-DeErr</h1>
-        <p class="banner-tag">Application-Oriented Error Decomposition for Foundation Potentials</p>
-      </div>
+  <div class="banner-id">
+    <img class="banner-mark" src="mark-emblem-named.png" alt="" />
+    <div class="banner-words">
+      <h1>FP-DeErr</h1>
+      <p class="banner-tag">Application-Oriented Error Decomposition for Foundation Potentials</p>
     </div>
-
-    <div class="banner-key" aria-hidden="true">
-      <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#eef1f4" stroke-width="4"/></svg>DFT</span>
-      <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#c9d1da" stroke-width="4" stroke-dasharray="7 5"/></svg>FP</span>
-    </div>
-
-    <div class="banner-panels">
-      <a class="banner-panel" style="--c: var(--c-force);" href="force-error.html"
-         aria-label="Force Prediction leaderboard: DFT and FP force vectors and the angle between them">
-        <svg class="panel-art" viewBox="0 0 272 148" aria-hidden="true" focusable="false">
-          <circle cx="30" cy="125" r="10" fill="none" stroke="#c9d1da" stroke-width="3"/>
-          <line x1="30" y1="125" x2="235" y2="62" stroke="#eef1f4" stroke-width="5.2"/>
-          <polygon points="249,57 226,50 232,75" fill="#eef1f4"/>
-          <line x1="30" y1="125" x2="190" y2="20" stroke="#6fa3e0" stroke-width="5.2" stroke-dasharray="13 9"/>
-          <polygon points="201,10 179,14 193,32" fill="#6fa3e0"/>
-          <path d="M 137.1 92.1 A 112 112 0 0 0 123.7 63.6" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
-          <text x="155.1" y="76.2" font-size="24" fill="#c9d1da" font-style="italic">&#916;&#952;</text>
-        </svg>
-        <span class="panel-label"><span class="panel-dot"></span>Force Prediction</span>
-      </a>
-
-      <a class="banner-panel" style="--c: var(--c-phase);" href="phase-stability-ordering.html"
-         aria-label="Phase Stability &amp; Ordering leaderboard: DFT and FP convex hulls with structures above the hull">
-        <svg class="panel-art" viewBox="0 0 272 148" aria-hidden="true" focusable="false">
-          <polyline points="20,22 70,92 135,122 200,95 255,18" fill="none" stroke="#eef1f4" stroke-width="4.6"/>
-          <polyline points="20,22 70,106 135,112 200,106 255,18" fill="none" stroke="#e0b350" stroke-width="4.6" stroke-dasharray="13 9"/>
-          <circle cx="20" cy="22" r="8" fill="#eef1f4"/><circle cx="70" cy="92" r="8" fill="#eef1f4"/>
-          <circle cx="135" cy="122" r="8" fill="#eef1f4"/><circle cx="200" cy="95" r="8" fill="#eef1f4"/>
-          <circle cx="255" cy="18" r="8" fill="#eef1f4"/>
-          <circle cx="70" cy="106" r="7.5" fill="#1d2733" stroke="#e0b350" stroke-width="3.5"/>
-          <circle cx="135" cy="112" r="7.5" fill="#1d2733" stroke="#e0b350" stroke-width="3.5"/>
-          <circle cx="200" cy="106" r="7.5" fill="#1d2733" stroke="#e0b350" stroke-width="3.5"/>
-          <circle cx="105" cy="70" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
-          <circle cx="165" cy="60" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
-          <circle cx="232" cy="48" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
-          <circle cx="46" cy="48" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
-        </svg>
-        <span class="panel-label"><span class="panel-dot"></span>Phase Stability &amp; Ordering</span>
-      </a>
-
-      <a class="banner-panel" style="--c: var(--c-ion);" href="ion-migration-neb.html"
-         aria-label="Ion Migration (NEB) leaderboard: DFT-NEB energy profile and an FP-NEB profile with a lower barrier">
-        <svg class="panel-art" viewBox="0 0 272 148" aria-hidden="true" focusable="false">
-          <line x1="15" y1="138" x2="262" y2="138" stroke="#56636f" stroke-width="2.5"/>
-          <path d="M 15 120 C 80 120, 100 15, 140 15 S 200 105, 255 105" fill="none" stroke="#eef1f4" stroke-width="4.6"/>
-          <path d="M 15 120 C 80 120, 100 55, 140 55 S 200 118, 255 118" fill="none" stroke="#5cc19d" stroke-width="4.6" stroke-dasharray="13 9"/>
-          <circle cx="15" cy="120" r="8" fill="#eef1f4"/><circle cx="140" cy="15" r="8" fill="#eef1f4"/>
-          <circle cx="255" cy="105" r="8" fill="#eef1f4"/>
-          <circle cx="140" cy="55" r="7.5" fill="#1d2733" stroke="#5cc19d" stroke-width="3.5"/>
-          <circle cx="255" cy="118" r="7.5" fill="#1d2733" stroke="#5cc19d" stroke-width="3.5"/>
-        </svg>
-        <span class="panel-label"><span class="panel-dot"></span>Ion Migration (NEB)</span>
-      </a>
-    </div>
-
-    <div class="banner-strip" aria-hidden="true"><i></i><i></i><i></i></div>
   </div>
+
+  <div class="banner-key" aria-hidden="true">
+    <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#eef1f4" stroke-width="4"/></svg>DFT</span>
+    <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#8b949e" stroke-width="4" stroke-dasharray="7 5"/></svg>FP</span>
+  </div>
+
+  <div class="banner-strip" aria-hidden="true"><i></i><i></i><i></i></div>
 </div>
 
 <section id="components">
   <h2>Components</h2>
   <div class="component-grid">
     <div class="component-card available">
+      <a class="card-art" style="--c: var(--c-force);" href="force-error.html"
+         aria-label="Force Prediction leaderboard: DFT and FP force vectors and the angle between them">
+        <svg class="panel-art" viewBox="0 0 272 148" aria-hidden="true" focusable="false">
+        <circle cx="30" cy="125" r="10" fill="none" stroke="#c9d1da" stroke-width="3"/>
+        <line x1="30" y1="125" x2="235" y2="62" stroke="#eef1f4" stroke-width="5.2"/>
+        <polygon points="249,57 226,50 232,75" fill="#eef1f4"/>
+        <line x1="30" y1="125" x2="190" y2="20" stroke="#6fa3e0" stroke-width="5.2" stroke-dasharray="13 9"/>
+        <polygon points="201,10 179,14 193,32" fill="#6fa3e0"/>
+        <path d="M 137.1 92.1 A 112 112 0 0 0 123.7 63.6" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
+        <text x="155.1" y="76.2" font-size="24" fill="#c9d1da" font-style="italic">&#916;&#952;</text>
+        </svg>
+      </a>
       <span class="status-badge status-available">Available</span>
       <h3>Force Prediction</h3>
       <p>Error-decomposition metrics for force prediction by FPs on MatPES-PBE, MatPES-r2SCAN, and OMat24 rattled-1000, covering highly accurate force predictions, joint magnitude-angle accuracy, large-force-error atoms, and far-from-equilibrium force errors.</p>
       <a class="btn btn-primary" href="force-error.html">View Force Prediction &rarr;</a>
     </div>
     <div class="component-card available">
+      <a class="card-art" style="--c: var(--c-phase);" href="phase-stability-ordering.html"
+         aria-label="Phase Stability &amp; Ordering leaderboard: DFT and FP convex hulls with structures above the hull">
+        <svg class="panel-art" viewBox="0 0 272 148" aria-hidden="true" focusable="false">
+        <polyline points="20,22 70,92 135,122 200,95 255,18" fill="none" stroke="#eef1f4" stroke-width="4.6"/>
+        <polyline points="20,22 70,106 135,112 200,106 255,18" fill="none" stroke="#e0b350" stroke-width="4.6" stroke-dasharray="13 9"/>
+        <circle cx="20" cy="22" r="8" fill="#eef1f4"/><circle cx="70" cy="92" r="8" fill="#eef1f4"/>
+        <circle cx="135" cy="122" r="8" fill="#eef1f4"/><circle cx="200" cy="95" r="8" fill="#eef1f4"/>
+        <circle cx="255" cy="18" r="8" fill="#eef1f4"/>
+        <circle cx="70" cy="106" r="7.5" class="fp-hollow" stroke="#e0b350" stroke-width="3.5"/>
+        <circle cx="135" cy="112" r="7.5" class="fp-hollow" stroke="#e0b350" stroke-width="3.5"/>
+        <circle cx="200" cy="106" r="7.5" class="fp-hollow" stroke="#e0b350" stroke-width="3.5"/>
+        <circle cx="105" cy="70" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
+        <circle cx="165" cy="60" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
+        <circle cx="232" cy="48" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
+        <circle cx="46" cy="48" r="6.5" fill="none" stroke="#c9d1da" stroke-width="2.5"/>
+        </svg>
+      </a>
       <span class="status-badge status-available">Available</span>
       <h3>Phase Stability and Elemental Ordering</h3>
       <p>Error-decomposition metrics for phase stability and elemental ordering by FPs: convex-hull/relative-phase-stability, elemental-ordering energy-ranking, and structural-relaxation (RMSD), evaluated on the FP-DeErr convex-hull and elemental-ordering benchmark subsets.</p>
       <a class="btn btn-primary" href="phase-stability-ordering.html">View Phase Stability and Elemental Ordering &rarr;</a>
     </div>
     <div class="component-card available">
+      <a class="card-art" style="--c: var(--c-ion);" href="ion-migration-neb.html"
+         aria-label="Ion Migration (NEB) leaderboard: DFT-NEB energy profile and an FP-NEB profile with a lower barrier">
+        <svg class="panel-art" viewBox="0 0 272 148" aria-hidden="true" focusable="false">
+        <line x1="15" y1="138" x2="262" y2="138" stroke="#56636f" stroke-width="2.5"/>
+        <path d="M 15 120 C 80 120, 100 15, 140 15 S 200 105, 255 105" fill="none" stroke="#eef1f4" stroke-width="4.6"/>
+        <path d="M 15 120 C 80 120, 100 55, 140 55 S 200 118, 255 118" fill="none" stroke="#5cc19d" stroke-width="4.6" stroke-dasharray="13 9"/>
+        <circle cx="15" cy="120" r="8" fill="#eef1f4"/><circle cx="140" cy="15" r="8" fill="#eef1f4"/>
+        <circle cx="255" cy="105" r="8" fill="#eef1f4"/>
+        <circle cx="140" cy="55" r="7.5" class="fp-hollow" stroke="#5cc19d" stroke-width="3.5"/>
+        <circle cx="255" cy="118" r="7.5" class="fp-hollow" stroke="#5cc19d" stroke-width="3.5"/>
+        </svg>
+      </a>
       <span class="status-badge status-available">Available</span>
       <h3>Ion Migration by NEB</h3>
       <p>Error-decomposition metrics for migration-barrier and migration-pathway predictions by FPs on 154 real Li- and Na-ion migration pathways using the nudged elastic band (NEB) method.</p>
