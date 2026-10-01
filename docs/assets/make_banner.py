@@ -35,7 +35,7 @@ def panel_force():
     p1 = (ox + r*math.cos(a_d), oy + r*math.sin(a_d))
     p2 = (ox + r*math.cos(a_f), oy + r*math.sin(a_f))
     am = (a_d + a_f)/2
-    lb = (ox + (r+24)*math.cos(am) + 2, oy + (r+24)*math.sin(am) + 9)
+    lb = (ox + (r+24)*math.cos(am) + 2, oy + (r+24)*math.sin(am) + 1)
     return f"""<circle cx="{ox}" cy="{oy}" r="10" fill="none" stroke="{SUBTEXT}" stroke-width="3"/>
 <line x1="{ox}" y1="{oy}" x2="{dft_tip[0]}" y2="{dft_tip[1]}" stroke="{LINE}" stroke-width="{STROKE+0.6}"/>
 <polygon points="249,57 226,50 232,75" fill="{LINE}"/>
