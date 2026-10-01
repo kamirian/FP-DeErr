@@ -8,8 +8,6 @@ FP-DeErr applies application-oriented error decomposition to foundation potentia
 also known as universal machine-learning interatomic potentials (MLIPs), resolving where
 errors arise in the computational tasks they are used for.
 
-FP-DeErr was previously named FPBench.
-
 FP-DeErr introduces application-oriented error decomposition through metrics that resolve
 performance according to the physically consequential quantities and configurations governing
 computational tasks, including the fractions of highly accurate and large-force-error atoms,
@@ -297,16 +295,16 @@ model name, version/checkpoint, and a link to the official implementation or mod
 
 ## Citation
 
-If you use FP-DeErr, please cite the paper, which is posted under the project's former name:
+If you use FP-DeErr, please cite the paper:
 
 Kiyan Amirian, Ramanuja Srinivasan Saravanan, Felix Adams, Charles E Schwarz and Yifei Mo,
-"FPBench: Application-Oriented Error Decomposition for Foundation Potentials",
+"FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials",
 arXiv:2609.05714 (2026). <https://arxiv.org/abs/2609.05714>
 
 ```bibtex
-@misc{amirian2026fpbench,
+@misc{amirian2026fpdeerr,
   author        = {Kiyan Amirian and Ramanuja Srinivasan Saravanan and Felix Adams and Charles E Schwarz and Yifei Mo},
-  title         = {FPBench: Application-Oriented Error Decomposition for Foundation Potentials},
+  title         = {FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials},
   year          = {2026},
   eprint        = {2609.05714},
   archivePrefix = {arXiv},

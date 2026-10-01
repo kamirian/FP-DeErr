@@ -217,16 +217,16 @@ Model versions and official sources for the evaluated FPs are documented once on
 
 ## Citation and license
 
-If you use FP-DeErr, please cite the paper, which is posted under the project's former name:
+If you use FP-DeErr, please cite the paper:
 
 Kiyan Amirian, Ramanuja Srinivasan Saravanan, Felix Adams, Charles E Schwarz and Yifei Mo,
-"FPBench: Application-Oriented Error Decomposition for Foundation Potentials",
+"FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials",
 arXiv:2609.05714 (2026). <https://arxiv.org/abs/2609.05714>
 
 ```bibtex
-@misc{amirian2026fpbench,
+@misc{amirian2026fpdeerr,
   author        = {Kiyan Amirian and Ramanuja Srinivasan Saravanan and Felix Adams and Charles E Schwarz and Yifei Mo},
-  title         = {FPBench: Application-Oriented Error Decomposition for Foundation Potentials},
+  title         = {FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials},
   year          = {2026},
   eprint        = {2609.05714},
   archivePrefix = {arXiv},
