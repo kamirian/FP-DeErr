@@ -176,8 +176,8 @@
                        color: var(--heading); letter-spacing: -0.5px; line-height: 1.1; margin: 0; }
     .banner-tag { margin: 0.4rem 0 0; font-size: clamp(0.95rem, 2.2vw, 1.18rem);
                   color: var(--text); max-width: none; }
-    .banner-key { display: flex; justify-content: center; gap: 1.4rem; margin-top: 1.2rem;
-                  color: var(--muted); font-size: 0.9rem; }
+    .banner-key { display: flex; justify-content: center; gap: 1.4rem;
+                  margin: 0 0 1.5rem; color: var(--muted); font-size: 0.9rem; }
     .banner-key span { display: inline-flex; align-items: center; gap: 0.45rem; }
     .key-line { width: 34px; height: 6px; display: block; flex: 0 0 auto; overflow: visible; }
     .banner-strip { display: flex; height: 5px; border-radius: 3px; overflow: hidden; margin-top: 1.4rem; }
@@ -185,8 +185,13 @@
     .banner-strip i:nth-child(1) { background: var(--c-force); }
     .banner-strip i:nth-child(2) { background: var(--c-phase); }
     .banner-strip i:nth-child(3) { background: var(--c-ion); }
-    #components { padding-top: 2.4rem; }
-    .hero { padding-top: 0.8rem; }
+    #components { padding-top: 2.2rem; }
+    .banner-intro { max-width: 760px; margin: 1.6rem auto 0; }
+    .banner-intro p { font-size: 1.12rem; line-height: 1.75; color: var(--text);
+                      margin-top: 1rem; }
+    .banner-intro .hero-cta { margin-top: 1.7rem; }
+    #components .component-card h3 { font-size: 1.15rem; }
+    #components .component-card p { font-size: 0.95rem; color: var(--text); }
 
     .card-art { display: block; border-radius: 10px; padding: 0.3rem 0.2rem;
                 margin: -0.3rem 0 1.1rem; transition: background 0.15s, transform 0.15s; }
@@ -256,16 +261,29 @@
     </div>
   </div>
 
-  <div class="banner-key" aria-hidden="true">
-    <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#eef1f4" stroke-width="4"/></svg>DFT</span>
-    <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#8b949e" stroke-width="4" stroke-dasharray="7 5"/></svg>FP</span>
+  <div class="banner-intro">
+  <p>
+    FP-DeErr introduces application-oriented error decomposition through metrics that resolve performance according to the physically consequential quantities and configurations governing computational tasks, including the fractions of highly accurate and large-force-error atoms, far-from-equilibrium atoms, relative phase-stability and convex-hull agreement, and along-path errors in ion migration. These error-decomposition metrics identify where FP errors arise within specific computational tasks, providing targeted guidance for model development.
+  </p>
+  <p>
+    FP-DeErr evaluates foundation potentials (FPs), also known as universal machine-learning
+    interatomic potentials (MLIPs), across three computational materials workflows: force
+    prediction, phase stability and elemental ordering, and ion migration by NEB calculations.
+  </p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="https://arxiv.org/abs/2609.05714">Paper (arXiv)</a>
+    <a class="btn btn-outline" href="https://github.com/mogroupumd/FP-DeErr">GitHub</a>
+  </div>
   </div>
 
   <div class="banner-strip" aria-hidden="true"><i></i><i></i><i></i></div>
 </div>
 
-<section id="components">
-  <h2>Components</h2>
+<section id="components" aria-label="Components">
+  <div class="banner-key" aria-hidden="true">
+    <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#eef1f4" stroke-width="4"/></svg>DFT</span>
+    <span><svg class="key-line" viewBox="0 0 34 6"><line x1="0" y1="3" x2="34" y2="3" stroke="#8b949e" stroke-width="4" stroke-dasharray="7 5"/></svg>FP</span>
+  </div>
   <div class="component-grid">
     <div class="component-card available">
       <a class="card-art" style="--c: var(--c-force);" href="force-error.html"
@@ -334,21 +352,6 @@
     <a href="https://doi.org/10.6084/m9.figshare.33332610" style="color:var(--accent);">Ion Migration dataset (Figshare)</a>
   </p>
 </section>
-
-<div class="hero">
-  <p>
-    FP-DeErr introduces application-oriented error decomposition through metrics that resolve performance according to the physically consequential quantities and configurations governing computational tasks, including the fractions of highly accurate and large-force-error atoms, far-from-equilibrium atoms, relative phase-stability and convex-hull agreement, and along-path errors in ion migration. These error-decomposition metrics identify where FP errors arise within specific computational tasks, providing targeted guidance for model development.
-  </p>
-  <p>
-    FP-DeErr evaluates foundation potentials (FPs), also known as universal machine-learning
-    interatomic potentials (MLIPs), across three computational materials workflows: force
-    prediction, phase stability and elemental ordering, and ion migration by NEB calculations.
-  </p>
-  <div class="hero-cta">
-    <a class="btn btn-primary" href="https://arxiv.org/abs/2609.05714">Paper (arXiv)</a>
-    <a class="btn btn-outline" href="https://github.com/mogroupumd/FP-DeErr">GitHub</a>
-  </div>
-</div>
 
 <div class="page-wrap">
 
