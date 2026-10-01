@@ -1,5 +1,13 @@
 <p align="center">
-  <img src="docs/readme-banner.png" alt="FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials" width="820">
+  <img src="docs/assets/fp-deerr-banner.png" alt="FP-DeErr: Application-Oriented Error Decomposition for Foundation Potentials" width="880">
+</p>
+
+<p align="center">
+  <a href="https://mogroupumd.github.io/FP-DeErr/force-error.html"><b>Force Prediction</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://mogroupumd.github.io/FP-DeErr/phase-stability-ordering.html"><b>Phase Stability &amp; Ordering</b></a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://mogroupumd.github.io/FP-DeErr/ion-migration-neb.html"><b>Ion Migration (NEB)</b></a>
 </p>
 
 # Overview
