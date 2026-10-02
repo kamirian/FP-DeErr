@@ -479,12 +479,36 @@
         <td><a href="https://sevennet.readthedocs.io/en/latest/user_guide/pretrained.html" style="color:var(--accent);">SevenNet pretrained models</a> &middot; <a href="https://doi.org/10.1021/jacs.4c14455" style="color:var(--accent);">Kim et al. 2025</a></td>
       </tr>
       <tr>
+        <td style="padding-left:1.4em;">&#8627; SevenNet-0</td>
+        <td>7net-0 (SevenNet_0__11Jul2024)</td>
+        <td>842.6K</td>
+        <td>MPTrj</td>
+        <td>~1.58M</td>
+        <td><a href="https://sevennet.readthedocs.io/en/latest/user_guide/pretrained.html" style="color:var(--accent);">SevenNet pretrained models</a></td>
+      </tr>
+      <tr>
+        <td style="padding-left:1.4em;">&#8627; SevenNet-Nano</td>
+        <td>7net-nano-6.0</td>
+        <td>103.4K</td>
+        <td>Distilled from 7net-Omni (<code>mpa</code> task) on 7net-Omni&rsquo;s training structures, including MatPES and OMat24&sect;&sect;</td>
+        <td>not reported</td>
+        <td><a href="https://sevennet.readthedocs.io/en/latest/user_guide/pretrained.html" style="color:var(--accent);">SevenNet pretrained models</a> &middot; <a href="https://arxiv.org/abs/2604.10887" style="color:var(--accent);">SevenNet-Nano paper</a></td>
+      </tr>
+      <tr>
         <td>MatterSim</td>
         <td>MatterSim-v1.0.0-5M</td>
         <td>4.55M</td>
         <td>Nonpublic MatterSim active-learning dataset, GGA-PBE(+U)&dagger;</td>
         <td>6M</td>
         <td><a href="https://github.com/microsoft/mattersim/blob/main/MODEL_CARD.md" style="color:var(--accent);">Model card</a> &middot; <a href="https://arxiv.org/abs/2405.04967" style="color:var(--accent);">Yang et al. 2024</a></td>
+      </tr>
+      <tr>
+        <td style="padding-left:1.4em;">&#8627; MatterSim-1M</td>
+        <td>MatterSim-v1.0.0-1M</td>
+        <td>890.0K</td>
+        <td>Nonpublic MatterSim active-learning dataset, GGA-PBE(+U)&dagger;</td>
+        <td>3M</td>
+        <td><a href="https://github.com/microsoft/mattersim/blob/main/MODEL_CARD.md" style="color:var(--accent);">Model card</a></td>
       </tr>
       <tr>
         <td>Nequix</td>
@@ -527,12 +551,44 @@
         <td><a href="https://huggingface.co/deepmodelingcommunity/DPA4-OMat24" style="color:var(--accent);">DPA4-OMat24 model card</a></td>
       </tr>
       <tr>
+        <td style="padding-left:1.4em;">&#8627; DPA4-Air</td>
+        <td>DPA4-Air-OMat24-v20260805</td>
+        <td>5.15M</td>
+        <td>OMat24, DFT / DFT+U#</td>
+        <td>~100.6M frames</td>
+        <td><a href="https://huggingface.co/deepmodelingcommunity/DPA4-OMat24" style="color:var(--accent);">DPA4-OMat24 model card</a></td>
+      </tr>
+      <tr>
         <td>GRACE</td>
         <td>GRACE-3L-OMAT-large-ft-AM</td>
         <td>42.1M&Dagger;&Dagger;</td>
         <td>OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning</td>
         <td>not reported for this checkpoint</td>
         <td><a href="https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/" style="color:var(--accent);">GRACE foundation models</a></td>
+      </tr>
+      <tr>
+        <td style="padding-left:1.4em;">&#8627; GRACE-1L</td>
+        <td>GRACE-1L-OAM</td>
+        <td>3.45M</td>
+        <td>OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning</td>
+        <td>not reported for this checkpoint</td>
+        <td><a href="https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/" style="color:var(--accent);">GRACE foundation models</a> &middot; <a href="https://arxiv.org/abs/2508.17936" style="color:var(--accent);">GRACE foundation-model paper</a></td>
+      </tr>
+      <tr>
+        <td style="padding-left:1.4em;">&#8627; GRACE-2L</td>
+        <td>GRACE-2L-OAM</td>
+        <td>12.6M</td>
+        <td>OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning</td>
+        <td>not reported for this checkpoint</td>
+        <td><a href="https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/" style="color:var(--accent);">GRACE foundation models</a> &middot; <a href="https://arxiv.org/abs/2508.17936" style="color:var(--accent);">GRACE foundation-model paper</a></td>
+      </tr>
+      <tr>
+        <td style="padding-left:1.4em;">&#8627; GRACE-2L-large</td>
+        <td>GRACE-2L-OMAT-large-ft-AM</td>
+        <td>26.4M</td>
+        <td>OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning</td>
+        <td>not reported for this checkpoint</td>
+        <td><a href="https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/" style="color:var(--accent);">GRACE foundation models</a> &middot; <a href="https://arxiv.org/abs/2508.17936" style="color:var(--accent);">GRACE foundation-model paper</a></td>
       </tr>
       <tr>
         <td>eqV2</td>
@@ -553,7 +609,7 @@
     </table>
   </div>
   <p class="note">* Pre-trained on MACE-OMAT-0, then fine-tuned on the matched MatPES functional.</p>
-  <p class="note">&dagger; The MatterSim model card reports "Training Data Size: 6M", "Model Parameters: 4.5M", and training on "a specific variant of Density Functional Theory (PBE)". The GGA-PBE(+U) labelling, with Hubbard U applied to selected materials following Materials Project settings, is described in Yang et al. rather than on the model card. The dataset itself is not released, so the OOD label reflects the absence of documented training exposure rather than a verified composition.</p>
+  <p class="note">&dagger; The MatterSim model card reports "Training Data Size: 6M", "Model Parameters: 4.5M", and training on "a specific variant of Density Functional Theory (PBE)". The GGA-PBE(+U) labelling, with Hubbard U applied to selected materials following Materials Project settings, is described in Yang et al. rather than on the model card. The dataset itself is not released, so the OOD label reflects the absence of documented training exposure rather than a verified composition. The same model card lists the smaller <code>MatterSim-v1.0.0-1M</code> checkpoint (MatterSim-1M) with "Training Data Size: 3M" and "Model Parameters: 880K"; FP-DeErr counts 890,034 parameters in the loaded checkpoint.</p>
   <p class="note">&Dagger; Rhodes et al. state that "all orb-v3-*-omat models are only trained on the AIMD subset of OMat24", and that the OMat24 dataset "contains ~55 million AIMD-sampled structures".</p>
   <p class="note">&sect; The FP-DeErr checkpoint is <code>nequix-oam-1</code>. The official nequix repository documents this checkpoint as trained on OMat24, sAlex and MPTrj at the DFT (PBE+U) level. The Nequix paper describes an MPTrj-trained model and does not report a training-set size or parameter count for this released OAM checkpoint; the 707,569-parameter model size shown here was measured from the loaded checkpoint by FP-DeErr.</p>
   <p class="note">&#8214; GPTFF&rsquo;s Atomly labels were computed with VASP at the GGA-PBE level with a 520 eV plane-wave cutoff and version 5.4 PAW pseudopotentials. The functional matches the FP-DeErr reference; the cutoff and pseudopotential version do not necessarily, so small systematic offsets relative to MatPES-PBE are expected independently of model quality.</p>
@@ -561,6 +617,8 @@
   <p class="note">&dagger;&dagger; NEP89 is trained on eleven datasets computed at different quantum-mechanical levels rather than a single reference functional. Its FP-DeErr MatPES-PBE scores therefore measure practical agreement with the PBE benchmark reference rather than agreement with a single matched reference functional. The eleven datasets and the 537,641-configuration total are reported in the NEP89 paper; the 976,331 trainable parameters were counted from the released model by FP-DeErr.</p>
   <p class="note">&Dagger;&Dagger; FP-DeErr counts 42.1M parameters (42,112,223) for the GRACE potential used in inference. The released SavedModel additionally contains a 23.4M-parameter GMM uncertainty head that is disabled in FP-DeErr runs and is therefore not included in the reported model size. The GRACE documentation does not publish a parameter count; 42.1M was measured from the released model by FP-DeErr.</p>
   <p class="note"># The immediate model sources describe these labels as DFT and DFT+U total-energy labels. OMat24 itself uses PBE/PBE+U reference calculations; see the <a href="https://arxiv.org/abs/2410.12771" style="color:var(--accent);">OMat24 dataset reference</a>.</p>
+  <p class="note">&sect;&sect; SevenNet-Nano is distilled from 7net-Omni: structures from 7net-Omni&rsquo;s training databases, including MatPES, MatPES-r2SCAN, OMat24, MPTrj and Alexandria, were relabelled with 7net-Omni&rsquo;s <code>mpa</code> (PBE) task (<a href="https://arxiv.org/abs/2604.10887" style="color:var(--accent);">arXiv:2604.10887</a>). The paper reports 105k parameters and does not report the size of the distillation set; FP-DeErr counts 103,401 parameters in the loaded checkpoint.</p>
+  <p class="note">&#8627; Indented rows are additional checkpoints of the FP family directly above, at a different model size. They are evaluated for Force Prediction (MatPES-PBE and OMat24 rattled-1000) only and appear on the Force Prediction leaderboard next to the family&rsquo;s main checkpoint. The DPA4 sizes are the parameter counts published on the DPA4-OMat24 model card; the other sizes are counted from the loaded checkpoints.</p>
   <p class="note">The manuscript revision expands the main roster to eleven FPs, adding Orb, MatterSim, DPA4 and GRACE to the seven originally reported. This website evaluates further FPs beyond that manuscript roster: the Ion Migration (NEB) leaderboard currently lists 15 FPs and the Phase Stability and Ordering leaderboard 17. The r2SCAN-trained entries are a separate set, evaluated only on the MatPES-r2SCAN dataset. Model sizes are parameter counts measured from the loaded checkpoints.</p>
   <p class="note">This is the current set of FPs evaluated. As additional FPs are tested, they will be added to this table; existing benchmark results remain tied to their original model versions and are not silently replaced.</p>
 </section>
@@ -580,18 +638,26 @@
       <tr><td>MACE-MatPES</td><td class="yes">&#10003; (training)</td><td class="yes">&#10003; (pretraining)*</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
       <tr><td>Orb</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (training)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
       <tr><td>SevenNet</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (training)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; SevenNet-0</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td><td>not evaluated</td><td>not evaluated</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; SevenNet-Nano</td><td class="yes">&#10003; (training)</td><td class="yes">&#10003; (training)</td><td>not evaluated</td><td>not evaluated</td></tr>
       <tr><td>MatterSim</td><td class="yes">&#10003; (OOD)&dagger;</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; MatterSim-1M</td><td class="yes">&#10003; (OOD)&dagger;</td><td class="yes">&#10003; (OOD)</td><td>not evaluated</td><td>not evaluated</td></tr>
       <tr><td>Nequix</td><td class="yes">&#10003; (OOD)&sect;</td><td class="yes">&#10003; (training)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
       <tr><td>GPTFF</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
       <tr><td>ALIGNN</td><td class="yes">&#10003; (OOD)&para;</td><td>not evaluated</td><td>not evaluated</td><td>not evaluated</td></tr>
       <tr><td>NEP89</td><td class="yes">&#10003; (OOD)&dagger;&dagger;</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
       <tr><td>DPA4</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (training)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; DPA4-Air</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (training)</td><td>not evaluated</td><td>not evaluated</td></tr>
       <tr><td>GRACE</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (pretraining)</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (OOD)</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; GRACE-1L</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (pretraining)</td><td>not evaluated</td><td>not evaluated</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; GRACE-2L</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (pretraining)</td><td>not evaluated</td><td>not evaluated</td></tr>
+      <tr><td style="padding-left:1.4em;">&#8627; GRACE-2L-large</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (pretraining)</td><td>not evaluated</td><td>not evaluated</td></tr>
       <tr><td>eqV2</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (pretraining)</td><td class="yes">&#10003; (OOD)</td><td>not evaluated</td></tr>
       <tr><td>eSEN</td><td class="yes">&#10003; (OOD)</td><td class="yes">&#10003; (pretraining)</td><td class="yes">&#10003; (OOD)</td><td>not evaluated</td></tr>
     </table>
   </div>
   <p class="note">* Pre-trained on MACE-OMAT-0, fine-tuned on MatPES-PBE.</p>
+  <p class="note">&#8627; Indented rows are additional, differently sized checkpoints of the family above, evaluated for Force Prediction only.</p>
   <p class="note">The three r2SCAN-trained FPs (M3GNet-MatPES-r2SCAN, TensorNet-MatPES-r2SCAN, MACE-MatPES-r2SCAN) are evaluated on the MatPES-r2SCAN dataset (training), in addition to the models listed above.</p>
   <p class="note"><strong style="color:var(--heading);">The last two columns reflect what is currently published on the component leaderboards</strong>, which now extends beyond the roster evaluated in the manuscript. eqV2 and eSEN are evaluated for <a href="phase-stability-ordering.html" style="color:var(--accent);">Phase Stability &amp; Ordering</a>; their <a href="ion-migration-neb.html" style="color:var(--accent);">Ion Migration (NEB)</a> runs are still in progress.</p>
 </section>

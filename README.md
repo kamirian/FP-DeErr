@@ -194,13 +194,20 @@ not silently replaced.
 | MACE-MatPES-r2SCAN | &gt;=v0.3.10 | 9.06M | Fine-tuned on MatPES-r2SCAN* | ~388K | [MACE](https://github.com/acesuit/mace) |
 | Orb | orb-v3-conservative-inf-omat-20250404 | 25.5M | OMat24, AIMD subset only | ~55M&Dagger; | [Rhodes et al. 2025](https://arxiv.org/abs/2504.06231) |
 | SevenNet | 7net-mf-ompa (modal `mpa`) | 25.7M | MPTrj + sAlex + OMat24, multi-fidelity; `mpa` selects the MPTrj + sAlex task | not reported for this checkpoint | [SevenNet pretrained models](https://sevennet.readthedocs.io/en/latest/user_guide/pretrained.html) &middot; [Kim et al. 2025](https://doi.org/10.1021/jacs.4c14455) |
+| &#8627; SevenNet-0 | 7net-0 (SevenNet_0__11Jul2024) | 842.6K | MPTrj | ~1.58M | [SevenNet pretrained models](https://sevennet.readthedocs.io/en/latest/user_guide/pretrained.html) |
+| &#8627; SevenNet-Nano | 7net-nano-6.0 | 103.4K | Distilled from 7net-Omni (`mpa` task) on 7net-Omni's training structures, including MatPES and OMat24&sect;&sect; | not reported | [SevenNet pretrained models](https://sevennet.readthedocs.io/en/latest/user_guide/pretrained.html) &middot; [SevenNet-Nano paper](https://arxiv.org/abs/2604.10887) |
 | MatterSim | MatterSim-v1.0.0-5M | 4.55M | Nonpublic MatterSim active-learning dataset, GGA-PBE(+U)&dagger; | 6M | [Model card](https://github.com/microsoft/mattersim/blob/main/MODEL_CARD.md) &middot; [Yang et al. 2024](https://arxiv.org/abs/2405.04967) |
+| &#8627; MatterSim-1M | MatterSim-v1.0.0-1M | 890.0K | Nonpublic MatterSim active-learning dataset, GGA-PBE(+U)&dagger; | 3M | [Model card](https://github.com/microsoft/mattersim/blob/main/MODEL_CARD.md) |
 | Nequix | nequix-oam-1 | 707.6K | OMat24 + sAlex + MPTrj, DFT (PBE+U)&sect; | not reported for this checkpoint | [nequix repository](https://github.com/atomicarchitects/nequix) &middot; [Koker et al. 2025](https://arxiv.org/abs/2508.16067) |
 | GPTFF | gptff_v2 | 502.5K | Atomly&#8214; | ~37.6M configurations | [Xie et al. 2024](https://doi.org/10.1016/j.scib.2024.08.039) |
 | ALIGNN | alignnff_wt10 | 4.03M | JARVIS-DFT&para; | ~307.1K | [Choudhary et al. 2023](https://arxiv.org/abs/2209.05554) |
 | NEP89 | nep89_20250409 | 976.3K | OMat24, MPTrj, SPICE, ANI-1xnr, SSE-ABACUS, SSE-VASP, Protein, UNEP-v1, CH, CHONPS, Water; mixed QM levels&dagger;&dagger; | 537,641 configurations | [GPUMD potentials](https://github.com/brucefan1983/GPUMD/tree/master/potentials/nep/nep89_20250409) &middot; [NEP89 paper](https://arxiv.org/abs/2504.21286) |
 | DPA4 | DPA4-Plus-OMat24-v20260805 | 8.85M | OMat24, DFT / DFT+U&#35; | ~100.6M frames | [DPA4-OMat24 model card](https://huggingface.co/deepmodelingcommunity/DPA4-OMat24) |
+| &#8627; DPA4-Air | DPA4-Air-OMat24-v20260805 | 5.15M | OMat24, DFT / DFT+U&#35; | ~100.6M frames | [DPA4-OMat24 model card](https://huggingface.co/deepmodelingcommunity/DPA4-OMat24) |
 | GRACE | GRACE-3L-OMAT-large-ft-AM | 42.1M&Dagger;&Dagger; | OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning | not reported for this checkpoint | [GRACE foundation models](https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/) |
+| &#8627; GRACE-1L | GRACE-1L-OAM | 3.45M | OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning | not reported for this checkpoint | [GRACE foundation models](https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/) &middot; [GRACE foundation-model paper](https://arxiv.org/abs/2508.17936) |
+| &#8627; GRACE-2L | GRACE-2L-OAM | 12.6M | OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning | not reported for this checkpoint | [GRACE foundation models](https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/) &middot; [GRACE foundation-model paper](https://arxiv.org/abs/2508.17936) |
+| &#8627; GRACE-2L-large | GRACE-2L-OMAT-large-ft-AM | 26.4M | OMat24 pretraining &rarr; sAlex + MPTrj fine-tuning | not reported for this checkpoint | [GRACE foundation models](https://gracemaker.readthedocs.io/en/latest/gracemaker/foundation/) &middot; [GRACE foundation-model paper](https://arxiv.org/abs/2508.17936) |
 | eqV2 | eqV2_31M_omat_mp_salex.pt | 31.2M | OMat24 pretraining &rarr; MPTrj + sAlex fine-tuning, DFT / DFT+U&#35; | not reported for this checkpoint | [Meta OMat24 models](https://huggingface.co/facebook/OMAT24) |
 | eSEN | esen_30m_oam.pt | 30.2M | OMat24 pretraining &rarr; MPTrj + sAlex fine-tuning, DFT / DFT+U&#35; | not reported for this checkpoint | [Meta OMat24 models](https://huggingface.co/facebook/OMAT24) |
 
@@ -211,6 +218,9 @@ training on "a specific variant of Density Functional Theory (PBE)". The GGA-PBE
 with Hubbard U applied to selected materials following Materials Project settings, is described in
 Yang et al. rather than on the model card. The dataset itself is not released, so the OOD label
 reflects the absence of documented training exposure rather than a verified composition.
+The same model card lists the smaller `MatterSim-v1.0.0-1M` checkpoint (MatterSim-1M) with
+"Training Data Size: 3M" and "Model Parameters: 880K"; FP-DeErr counts 890,034 parameters in the
+loaded checkpoint.
 
 &Dagger; Rhodes et al. state that "all orb-v3-*-omat models are only trained on the AIMD subset of
 OMat24", and that the OMat24 dataset "contains ~55 million AIMD-sampled structures".
@@ -245,6 +255,18 @@ does not publish a parameter count; 42.1M was measured from the released model b
 OMat24 itself uses PBE/PBE+U reference calculations; see the
 [OMat24 dataset reference](https://arxiv.org/abs/2410.12771).
 
+&sect;&sect; SevenNet-Nano is distilled from 7net-Omni: structures from 7net-Omni's training
+databases, including MatPES, MatPES-r2SCAN, OMat24, MPTrj and Alexandria, were relabelled with
+7net-Omni's `mpa` (PBE) task ([arXiv:2604.10887](https://arxiv.org/abs/2604.10887)). The paper
+reports 105k parameters and does not report the size of the distillation set; FP-DeErr counts
+103,401 parameters in the loaded checkpoint.
+
+&#8627; Rows marked with an arrow are additional checkpoints of the FP family directly above, at
+a different model size. They are evaluated for Force Prediction (MatPES-PBE and OMat24
+rattled-1000) only and appear on the Force Prediction leaderboard next to the family's main
+checkpoint. The DPA4 sizes are the parameter counts published on the DPA4-OMat24 model card; the
+other sizes are counted from the loaded checkpoints.
+
 The manuscript revision expands the main roster to eleven FPs, adding Orb, MatterSim, DPA4
 and GRACE to the seven originally reported. This website evaluates further FPs beyond that
 manuscript roster: the Ion Migration (NEB) leaderboard currently lists 15 FPs and the Phase
@@ -270,13 +292,20 @@ other data (`pretraining`).
 | MACE-MatPES | &#10003; (training) | &#10003; (pretraining)* | &#10003; (OOD) | &#10003; (OOD) |
 | Orb | &#10003; (OOD) | &#10003; (training) | &#10003; (OOD) | &#10003; (OOD) |
 | SevenNet | &#10003; (OOD) | &#10003; (training) | &#10003; (OOD) | &#10003; (OOD) |
+| &#8627; SevenNet-0 | &#10003; (OOD) | &#10003; (OOD) | not evaluated | not evaluated |
+| &#8627; SevenNet-Nano | &#10003; (training) | &#10003; (training) | not evaluated | not evaluated |
 | MatterSim | &#10003; (OOD)&dagger; | &#10003; (OOD) | &#10003; (OOD) | &#10003; (OOD) |
+| &#8627; MatterSim-1M | &#10003; (OOD)&dagger; | &#10003; (OOD) | not evaluated | not evaluated |
 | Nequix | &#10003; (OOD)&sect; | &#10003; (training) | &#10003; (OOD) | &#10003; (OOD) |
 | GPTFF | &#10003; (OOD) | &#10003; (OOD) | &#10003; (OOD) | &#10003; (OOD) |
 | ALIGNN | &#10003; (OOD)&para; | not evaluated | not evaluated | not evaluated |
 | NEP89 | &#10003; (OOD)&dagger;&dagger; | &#10003; (OOD) | &#10003; (OOD) | &#10003; (OOD) |
 | DPA4 | &#10003; (OOD) | &#10003; (training) | &#10003; (OOD) | &#10003; (OOD) |
+| &#8627; DPA4-Air | &#10003; (OOD) | &#10003; (training) | not evaluated | not evaluated |
 | GRACE | &#10003; (OOD) | &#10003; (pretraining) | &#10003; (OOD) | &#10003; (OOD) |
+| &#8627; GRACE-1L | &#10003; (OOD) | &#10003; (pretraining) | not evaluated | not evaluated |
+| &#8627; GRACE-2L | &#10003; (OOD) | &#10003; (pretraining) | not evaluated | not evaluated |
+| &#8627; GRACE-2L-large | &#10003; (OOD) | &#10003; (pretraining) | not evaluated | not evaluated |
 | eqV2 | &#10003; (OOD) | &#10003; (pretraining) | &#10003; (OOD) | not evaluated |
 | eSEN | &#10003; (OOD) | &#10003; (pretraining) | &#10003; (OOD) | not evaluated |
 
